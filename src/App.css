@@ -1,0 +1,178 @@
+.App {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.NavLink {
+
+  padding: 2px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color:white
+}
+.conditionutilisation{
+  padding: 10px;
+}
+.nav{
+  /* margin: 5px; */
+  display: flex;
+  justify-content: space-around;
+  background-color: coral;
+  border-radius: 5px;
+  font-weight: bold;
+
+  z-index: 5;
+  width: 100%;
+ 
+
+}
+
+.logincontainer{
+  margin-top: 20vh;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  padding: 20px;
+
+}
+.logincontainer button {
+
+}
+.linkbutton  {
+  margin: 15px;
+  text-decoration: none;
+  
+ 
+}
+
+
+/* container //////////////////////////////  */
+
+.containerbutton {
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.containerlink{
+  text-decoration: none;
+}
+
+
+/* login//////////////////////////////  */
+
+.logo{
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+
+.loginbutton{
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+/* conditions d'utilisation //////////////////////////////  */
+.nav-button{
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+
+}
+
+/* boulecontainer //////////////////////////////  */
+
+.boulecontainerbutton{
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+
+}
+
+/* home //////////////////////////////  */
+.homecontainer{
+  margin-top: 30vh;
+
+
+}
+
+.en_construction{
+  height: 50vh;
+  margin-top: 10vh;
+}
+
+.home_logo{
+  height: 20px;
+
+}
+
+/* header is active bold and surligne  */
+
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.NavLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: white; /* Default color */
+  /* font-weight: normal;  */
+}
+
+.NavLink.active {
+  /* font-weight: bolder; */
+  /* color: #007bff;  */
+  /* color: black; */
+  /* color: rgb(210, 219, 220); */
+  text-decoration: underline; 
+  /* border: solid 1px; */
+}
+
+/* profile message */
+.messageprofile{
+padding: 10px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
