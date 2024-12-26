@@ -71,7 +71,7 @@ import Secret from "./Secret";
 export const AuthContext = createContext();
 
 // Initialize Google Analytics with your Measurement ID
-const GA_MEASUREMENT_ID = "G-TZMV18YT9B"; // Replace with your GA4 Measurement ID
+const GA_MEASUREMENT_ID = "xxxxxxx"; // Replace with your GA4 Measurement ID
 ReactGA.initialize(GA_MEASUREMENT_ID);
 
 function App() {
