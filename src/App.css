@@ -46,7 +46,8 @@
   display: flex;
   justify-content: space-around;
   background-color: coral;
-  border-radius: 5px;
+  /* background: rgb(27,69,166);
+background: linear-gradient(90deg, rgba(27,69,166,1) 0%, rgba(189,79,238,1) 0%, rgba(237,159,20,0.9360994397759104) 49%); */
   font-weight: bold;
 
   z-index: 5;
@@ -166,6 +167,20 @@
 /* profile message */
 .messageprofile{
 padding: 10px;
+}
+
+.infocontainer{
+
+  border: solid 1px lightgrey;
+  margin: 18px;
+  border-radius: 5px;
+  padding: 5px;
+
+
+  /* border-radius: 5px;
+  background: #ffffff;
+  box-shadow:  5px 5px 10px #e3e3e3,
+               -5px -5px 10px #ffffff; */
 }
 
 @keyframes App-logo-spin {
