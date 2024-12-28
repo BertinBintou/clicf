@@ -17,10 +17,10 @@ function Conditionutilisation() {
     <div className="App conditionutilisation">
         <h3>Conditions d'utilisation</h3>
         <div style={{ textAlign: 'justify' }}>
-        1. Acceptation des conditions : En accédant et en utilisant ce site web Catchmy peach , vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.
+        1. Acceptation des conditions : En accédant et en utilisant ce site, vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.
             <br/>
             <br/>
-        2. Objet du site : Ce site est un jeu dans lequel les utilisateurs tente de cliquer sur un bouton en mouvement, un image s'afficher il y parvient. 
+        2. Objet du site :Découvrir des artistes de façon aléatoire. 
             <br/>
             <br/>
         3. Utilisation du siteVous vous engagez à utiliser ce site uniquement à des fins licites et conformément aux présentes conditions. Il est interdit de :
@@ -33,7 +33,7 @@ function Conditionutilisation() {
             </ul>
             
             <br/>
-            4. Ce site est strictement réservé aux majeurs, il contient de la nudité du contenu sexuellement explicite interdit à un public mineur. 
+            4. Une partie de site (Adulte )est strictement réservé aux majeurs, il contient de la nudité du contenu sexuellement explicite interdit à un public mineur. 
             en accédant à ce site vou sertifié etre majeur. 
             <ul>
                     <li>Avoir minimum 18 ans, dans tous les pays et juridictions d'utilisation.</li>

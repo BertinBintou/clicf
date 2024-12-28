@@ -63,7 +63,7 @@ function BouleContainer() {
                     {/* profile info container  */}
                     <div>
                         <p>{currentBoule.name && (currentBoule.name) }</p> {/* nom  */}
-                        
+                        {/* <p>{currentBoule.id && (currentBoule.id) }</p> */}
                         {/* insta  */}
                         {currentBoule.instagram && ( <p>insta 📲{" "}<a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer"> {/* insta  */}
                          {currentBoule.instaname }
