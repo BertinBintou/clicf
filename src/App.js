@@ -71,7 +71,7 @@ import Secret from "./Secret";
 export const AuthContext = createContext();
 
 // Initialize Google Analytics with your Measurement ID
-const GA_MEASUREMENT_ID = "xxxxxxx"; // Replace with your GA4 Measurement ID
+const GA_MEASUREMENT_ID = "G-7EC968D6P1"; // Replace with your GA4 Measurement ID
 ReactGA.initialize(GA_MEASUREMENT_ID);
 
 function App() {
@@ -96,7 +96,7 @@ function App() {
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/femmes" element={<ProtectedRoute><BouleContainer /></ProtectedRoute>} />
           <Route path="/hommes" element={<ProtectedRoute><Boulecontainerman /></ProtectedRoute>} />
-          {/* <Route path="/a" element={<Secret/>} /> */}
+          <Route path="/a" element={<Secret/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
