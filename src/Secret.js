@@ -761,6 +761,8 @@ function Secret() {
 
   return (
     <div className="App">
+       <a href="#bas">bas de la page</a>
+       <div id="haut"></div>
       <div className="password-container" >
         <input 
           type="password"
@@ -776,6 +778,8 @@ function Secret() {
       </div>
       {isAuthenticated ? bouleMapping : <div>Please enter the correct password to view content</div>}
       {/* {bouleMapping} */}
+      <div id="bas"></div>
+      <a href="#haut">haut de la page</a>
     </div>
   );
 }

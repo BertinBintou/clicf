@@ -250,6 +250,18 @@ function BouleContainer() {
                        {currentBoule.twitter && ( <p>X (twitter) ⚔️ {" "}<a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer"> {/* insta  */}
                          {currentBoule.twittername }
                          </a> </p>)}
+
+                         {currentBoule.reddit && ( <p> reddit {" "}<a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+                         {currentBoule.redditname }
+                         </a> </p>)}
+
+                         {currentBoule.youtube && ( <p> youtube 🔺 {" "}<a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+                         {currentBoule.youtubename}
+                         </a> </p>)}
+
+                         {currentBoule.linkree && ( <p> link {" "}<a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+                         {currentBoule.inkreename}
+                         </a> </p>)}
                         
                         
                          <p className="messageprofile">{currentBoule.message}</p>
