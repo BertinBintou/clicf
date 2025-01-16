@@ -1882,7 +1882,7 @@
     "inkreename": "allmylinks valentinaomi"
   },
   {
-    "id": "77",
+    "id": "78",
     "img": [
         "autumn renae0.jpg",
         "autumn renae1.jpg"
@@ -1907,5 +1907,61 @@
     "youtubename": "@autumnrenn",
     "linkree": "https://onlylinks.com/autumn",
     "inkreename": "onlylinks @autumn"
+},
+{
+  "id": "79",
+  "img": [
+      
+      "pub1.jpg"
+   
+  ],
+  "name": "Pub 1",
+  "message": "",
+  "instagram": "",
+  "instaname": "",
+  "tiktok": "",
+  "tiktokname": "",
+  "link": "https://www.istockphoto.com/fr/photo/concept-de-marketing-num%C3%A9rique-homme-daffaires-utilisant-un-ordinateur-portable-gm2098359215-566234263?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Ffr%2Fimages%2Fsearch%2Fpublicit%25C3%25A9%2F&utm_term=publicit%C3%A9",
+  "linkname": "Achetez notre produit",
+  "telegram": "",
+  "telegramname": "",
+  "onlyfan": "",
+  "onlyfanname": "",
+  "twitter": "",
+  "twittername": "",
+  "reddit": "",
+  "redditname": "",
+  "youtube": "",
+  "youtubename": "",
+  "linkree": "",
+  "inkreename": ""
+},
+{
+  "id": "80",
+  "img": [
+      
+      "pub2.png"
+
+  ],
+  "name": "Pub 1",
+  "message": "",
+  "instagram": "",
+  "instaname": "",
+  "tiktok": "",
+  "tiktokname": "",
+  "link": "https://pixabay.com/fr/vectors/march%C3%A9-la-publicit%C3%A9-r%C3%A9f%C3%A9rencement-5000694/",
+  "linkname": "Achetez notre produit pub 2",
+  "telegram": "",
+  "telegramname": "",
+  "onlyfan": "",
+  "onlyfanname": "",
+  "twitter": "",
+  "twittername": "",
+  "reddit": "",
+  "redditname": "",
+  "youtube": "",
+  "youtubename": "",
+  "linkree": "",
+  "inkreename": ""
 }
 ]

@@ -43,7 +43,7 @@
 //     };
 
 //     useEffect(() => {
-//         const intervalId = setInterval(randomizeButtonPosition, 650);/////////////////////////////////////////////////////////////////////
+//         const intervalId = setInterval(randomizeButtonPosition, 650000);/////////////////////////////////////////////////////////////////////
 //         return () => clearInterval(intervalId);
 //     }, []);
 
@@ -55,11 +55,20 @@
 //                 <div className="boulecarde">
 
 //                     {/* image  */}
-//                     <img
+//                     {/* <img
 //                         src={currentBoule.fullImageUrl}
 //                         style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth:"500px" }}
 //                         alt={currentBoule.name}
-//                     />
+//                     /> */}
+
+//                     {currentBoule.img && currentBoule.img.map((image, index) => (
+//                             <img
+//                                 key={index}
+//                                 src={`/boulesia/${image}`}
+//                                 style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth: "500px" }}
+//                                 alt={`${currentBoule.name} - image ${index + 1}`}
+//                             />
+//                         ))}
 //                     {/* profile info container  */}
 //                     <div >
 //                     {/* <div className="infocontainer"> */}
@@ -94,6 +103,18 @@
 //                                {/* twitter*/}
 //                        {currentBoule.twitter && ( <p>X (twitter) ⚔️ {" "}<a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer"> {/* insta  */}
 //                          {currentBoule.twittername }
+//                          </a> </p>)}
+
+//                          {currentBoule.reddit && ( <p> reddit {" "}<a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+//                          {currentBoule.redditname }
+//                          </a> </p>)}
+
+//                          {currentBoule.youtube && ( <p> youtube 🔺 {" "}<a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+//                          {currentBoule.youtubename}
+//                          </a> </p>)}
+
+//                          {currentBoule.linkree && ( <p> link {" "}<a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer"> {/* insta  */}
+//                          {currentBoule.inkreename}
 //                          </a> </p>)}
                         
                         
@@ -144,6 +165,11 @@
 // export default BouleContainer;
 
 
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
 import React, { useState, useEffect } from "react";
 import './App.css';
 
@@ -152,6 +178,10 @@ function BouleContainer() {
     const [currentBoule, setCurrentBoule] = useState(null);
     const [showRetryButton, setShowRetryButton] = useState(false);
     const [boulesData, setBoulesData] = useState([]);
+    const [clickCount, setClickCount] = useState(0);
+
+    // Featured content array
+    const featuredContent = ["79","80"]; // IDs of boules to be shown every 10 clicks
 
     // Fetch the JSON data when component mounts
     useEffect(() => {
@@ -162,7 +192,36 @@ function BouleContainer() {
     }, []);
 
     const handleShowBoule = () => {
-        // Randomly select a boule from the data
+        const newClickCount = clickCount + 1;
+        setClickCount(newClickCount);
+
+        // Check if it's time to show a featured item
+        // if (newClickCount % 10 === 0) {
+        //     const featuredIndex = Math.floor(newClickCount / 10 - 1) % featuredContent.length;
+        //     const featuredId = featuredContent[featuredIndex];
+        //     const featuredItem = boulesData.find((item) => item.id === featuredId);
+
+        //     if (featuredItem) {
+        //         setCurrentBoule(featuredItem);
+        //         setShowRetryButton(true);
+        //         return;
+        //     }
+        // }
+
+        if (newClickCount % 4 === 0) {
+            const featuredIndex = Math.floor(newClickCount / 3 - 1) % featuredContent.length;
+            const featuredId = featuredContent[featuredIndex];
+            const featuredItem = boulesData.find((item) => item.id === featuredId);
+        
+            if (featuredItem) {
+                setCurrentBoule(featuredItem);
+                setShowRetryButton(true);
+                return;
+            }
+        }
+        
+
+        // Otherwise, randomly select a boule
         if (boulesData.length > 0) {
             const randomIndex = Math.floor(Math.random() * boulesData.length);
             const selectedBoule = boulesData[randomIndex];
@@ -170,7 +229,7 @@ function BouleContainer() {
             // Create the full image URL
             const imageUrl = `/boulesia/${selectedBoule.img}`;
             selectedBoule.fullImageUrl = imageUrl;
-            
+
             setCurrentBoule(selectedBoule);
             setShowRetryButton(true);
         }
@@ -189,7 +248,7 @@ function BouleContainer() {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(randomizeButtonPosition, 650);/////////////////////////////////////////////////////////////////////
+        const intervalId = setInterval(randomizeButtonPosition, 650000);/////////////////////////////////////////////////////////////////////
         return () => clearInterval(intervalId);
     }, []);
 
@@ -200,73 +259,84 @@ function BouleContainer() {
             {currentBoule && (
                 <div className="boulecarde">
 
-                    {/* image  */}
-                    {/* <img
-                        src={currentBoule.fullImageUrl}
-                        style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth:"500px" }}
-                        alt={currentBoule.name}
-                    /> */}
-
+                    {/* Image display */}
                     {currentBoule.img && currentBoule.img.map((image, index) => (
-                            <img
-                                key={index}
-                                src={`/boulesia/${image}`}
-                                style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth: "500px" }}
-                                alt={`${currentBoule.name} - image ${index + 1}`}
-                            />
-                        ))}
-                    {/* profile info container  */}
-                    <div >
-                    {/* <div className="infocontainer"> */}
-                        <p>{currentBoule.name && (currentBoule.name) }</p> {/* nom  */}
-                        {/* <p>{currentBoule.id && (currentBoule.id) }</p> */}
-                        {/* insta  */}
-                        {currentBoule.instagram && ( <p>insta 📲{" "}<a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.instaname }
-                         </a> </p>)}
+                        <img
+                            key={index}
+                            src={`/boulesia/${image}`}
+                            style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth: "500px" }}
+                            alt={`${currentBoule.name} - image ${index + 1}`}
+                        />
+                    ))}
 
-                           {/* tiktok */}
-                       {currentBoule.tiktok  && ( <p>tiktok 📲 {" "}<a href={currentBoule.tiktok} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.tiktokname }
-                         </a> </p>)}
-                        
-                        
-                         {/* link */}
-                       {currentBoule.link  && ( <p>liens 🔗{" "}<a href={currentBoule.link} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.linkname }
-                         </a> </p>)}
-
-                          {/* onlyfan */}
-                       {currentBoule.onlyfan  && ( <p> onlyfan 🔵{" "}<a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.onlyfanname }
-                         </a> </p>)}
-
-                              {/* telegram */}
-                       {currentBoule.telegram  && ( <p> telegram ↗️{" "}<a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.telegramname }
-                         </a> </p>)}
-
-                               {/* twitter*/}
-                       {currentBoule.twitter && ( <p>X (twitter) ⚔️ {" "}<a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.twittername }
-                         </a> </p>)}
-
-                         {currentBoule.reddit && ( <p> reddit {" "}<a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.redditname }
-                         </a> </p>)}
-
-                         {currentBoule.youtube && ( <p> youtube 🔺 {" "}<a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.youtubename}
-                         </a> </p>)}
-
-                         {currentBoule.linkree && ( <p> link {" "}<a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer"> {/* insta  */}
-                         {currentBoule.inkreename}
-                         </a> </p>)}
-                        
-                        
-                         <p className="messageprofile">{currentBoule.message}</p>
+                    {/* Profile information */}
+                    <div>
+                        <p>{currentBoule.name && currentBoule.name}</p>
+                        {currentBoule.instagram && (
+                            <p>Instagram 📲{" "}
+                                <a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.instaname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.tiktok && (
+                            <p>TikTok 📲{" "}
+                                <a href={currentBoule.tiktok} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.tiktokname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.link && (
+                            <p>Links 🔗{" "}
+                                <a href={currentBoule.link} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.linkname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.onlyfan && (
+                            <p>OnlyFans 🔵{" "}
+                                <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.onlyfanname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.telegram && (
+                            <p>Telegram ↗️{" "}
+                                <a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.telegramname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.twitter && (
+                            <p>X (Twitter) ⚔️{" "}
+                                <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.twittername}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.reddit && (
+                            <p>Reddit{" "}
+                                <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.redditname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.youtube && (
+                            <p>YouTube 🔺{" "}
+                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.youtubename}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.linkree && (
+                            <p>Linkree{" "}
+                                <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.inkreename}
+                                </a>
+                            </p>
+                        )}
+                        <p className="messageprofile">{currentBoule.message}</p>
                     </div>
-                    {/* <p className="messageprofile">{currentBoule.message}</p> */}
                 </div>
             )}
 
@@ -291,7 +361,7 @@ function BouleContainer() {
 
             {showRetryButton && (
                 <div style={{ textAlign: "center", marginTop: "20px" }}>
-                    <button 
+                    <button
                         className="boulecontainerbutton"
                         onClick={handleRetry}
                         style={{
