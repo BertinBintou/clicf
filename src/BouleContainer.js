@@ -248,7 +248,7 @@ function BouleContainer() {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(randomizeButtonPosition, 650000);/////////////////////////////////////////////////////////////////////
+        const intervalId = setInterval(randomizeButtonPosition, 650);/////////////////////////////////////////////////////////////////////
         return () => clearInterval(intervalId);
     }, []);
 
