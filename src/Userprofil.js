@@ -163,7 +163,7 @@ function Userprofil() {
                                 <p> Entrez un identifiant reconnu ❗</p>
                             )}
 
-                            {currentBoule.img && currentBoule.img.map((image, index) => (
+                            {/* {currentBoule.img && currentBoule.img.map((image, index) => (
                                 <img
                                     key={index}
                                     src={`/boulesia/${image}`}
@@ -228,8 +228,86 @@ function Userprofil() {
                                     </a>
                                 </p>
                             )}
-                            <p style={{ marginTop: "20px", fontStyle: "italic" }}>{currentBoule.message}</p>
+                            <p style={{ marginTop: "20px", fontStyle: "italic" }}>{currentBoule.message}</p> */}
+
+{currentBoule.img && currentBoule.img.map((image, index) => (
+                        <img
+                            key={index}
+                            src={`/boulesia/${image}`}
+                            style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth: "500px" }}
+                            alt={`${currentBoule.name} - image ${index + 1}`}
+                        />
+                    ))}
+
+                    {/* Profile information */}
+                    <div>
+                        <p>{currentBoule.name && currentBoule.name}</p>
+                        {currentBoule.instagram && (
+                            <p>Instagram 📲{" "}
+                                <a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.instaname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.tiktok && (
+                            <p>TikTok 📲{" "}
+                                <a href={currentBoule.tiktok} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.tiktokname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.link && (
+                            <p>Links 🔗{" "}
+                                <a href={currentBoule.link} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.linkname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.onlyfan && (
+                            <p>OnlyFans 🔵{" "}
+                                <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.onlyfanname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.telegram && (
+                            <p>Telegram ↗️{" "}
+                                <a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.telegramname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.twitter && (
+                            <p>X (Twitter) ⚔️{" "}
+                                <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.twittername}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.reddit && (
+                            <p>Reddit{" "}
+                                <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.redditname}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.youtube && (
+                            <p>YouTube 🔺{" "}
+                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.youtubename}
+                                </a>
+                            </p>
+                        )}
+                        {currentBoule.linkree && (
+                            <p>Linkree{" "}
+                                <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer">
+                                    {currentBoule.inkreename}
+                                </a>
+                            </p>
+                        )}
+                        <p className="messageprofile">{currentBoule.message}</p>
                         </div>
+                    </div>
 
      
 
