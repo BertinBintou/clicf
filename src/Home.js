@@ -51,11 +51,11 @@ function Home() {
         <iframe class="airtable-embed" src="https://airtable.com/embed/appC6RFWJTUmYg7FU/pagOvkh4hdueEp6FH/form" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe></div>}
         <div>
 
-        {/* <button className="containerbutton candidaturbutton" >
+        <button className="containerbutton candidaturbutton" >
           <Link  className="containerlink" to="/usersprofilelink" >
            Voir mon profil
           </Link>
-        </button> */}
+        </button>
       
     </div>
 
