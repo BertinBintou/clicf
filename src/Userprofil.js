@@ -12,6 +12,12 @@ function Userprofil() {
     const [filteredData, setFilteredData] = useState([]);
     const [clickCount, setClickCount] = useState(0);
     const [showDiv, setShowDiv] = useState(false);
+     
+      // const [showDivTime, setShowDivTime] = useState(true);
+    const [showLoadingMessage, setShowLoadingMessage] = useState(false);
+    
+    
+
 
     // Featured content array - add the IDs of the elements you want to show every 5 clicks
     const featuredContent = [
@@ -115,10 +121,19 @@ function Userprofil() {
         return Array.isArray(sousdomaines) ? sousdomaines.join(", ") : sousdomaines;
     };
 
+    // const handleButtonClick = () => {
+    //     setShowDiv(!showDiv);
+    //   };
+
     const handleButtonClick = () => {
         setShowDiv(!showDiv);
+        if (!showDiv) {
+          setShowLoadingMessage(true);
+          setTimeout(() => {
+            setShowLoadingMessage(false);
+          }, 5000); // Hide the message after 5 seconds
+        }
       };
-
 
     return (
         <div style={{ position: "relative", height: "100vh", width: "100%" }}>
@@ -317,7 +332,8 @@ function Userprofil() {
       </button>
       {showDiv && 
       <div> 
-        <div>peux mettre un peu de temps à charger...</div>
+        {/* <div>peux mettre un peu de temps à charger...</div> */}
+        {showLoadingMessage && <div>peux mettre un peu de temps à charger...</div>}
         <iframe class="airtable-embed" src="https://airtable.com/embed/appC6RFWJTUmYg7FU/pagql4a4wuoL3SZY0/form" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe></div>}
     {/* </div> */}
 
