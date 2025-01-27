@@ -2,8 +2,13 @@
   text-align: center;
   margin: 0px;
   padding: 0px;
+
 }
 
+/* body{
+  background-color: black;
+  color: aliceblue;
+} */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -71,6 +76,7 @@ background: linear-gradient(90deg, rgba(27,69,166,1) 0%, rgba(189,79,238,1) 0%, 
 .linkbutton  {
   margin: 15px;
   text-decoration: none;
+  /* color: coral; */
   
  
 }
