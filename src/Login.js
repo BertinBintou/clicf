@@ -89,7 +89,7 @@ function Login() {
 
   return (
     <div className="App logincontainer">
-      <h1>Bienvenu sur Catch My Peach</h1>
+      <h1>Bienvenu sur tap to fap</h1>
       <div className='logo'>🍑</div>
       <div className="logintitre">
         Je confirme être majeur (au moins 18 ans) et avoir lu et accepté les conditions d'utilisations🔞.
