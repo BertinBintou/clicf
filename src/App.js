@@ -67,6 +67,7 @@ import Error from './Error';
 import Conditionutilisation from './Conditionutilisation';
 import Secret from "./Secret";
 import Userprofil from "./Userprofil";
+import Footer from "./Footer"
 
 // Create a context for checkbox state
 export const AuthContext = createContext();
@@ -101,8 +102,11 @@ function App() {
           <Route path="/usersprofilelink" element={<Userprofil/>} />
           <Route path="*" element={<Error />} />
         </Routes>
+        {/* <Footer/> */}
       </div>
+   
     </AuthContext.Provider>
+   
   );
 }
 
