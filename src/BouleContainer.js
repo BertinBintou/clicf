@@ -473,7 +473,7 @@ function BouleContainer() {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(randomizeButtonPosition, 66000);/////////////////////////////////////////////////////////////////////
+        const intervalId = setInterval(randomizeButtonPosition, 660);/////////////////////////////////////////////////////////////////////
         return () => clearInterval(intervalId);
     }, []);
 
