@@ -5,10 +5,10 @@
 
 }
 
-/* body{
-  background-color: black;
-  color: aliceblue;
-} */
+body{
+  background-color: #070707;
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -84,15 +84,11 @@ background: linear-gradient(90deg, rgba(27,69,166,1) 0%, rgba(189,79,238,1) 0%, 
 
 /* container //////////////////////////////  */
 
-.containerbutton {
-  border: none;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 50px;
-}
+
 
 .containerlink{
   text-decoration: none;
+  color: #070707;
 }
 
 
@@ -129,12 +125,113 @@ background: linear-gradient(90deg, rgba(27,69,166,1) 0%, rgba(189,79,238,1) 0%, 
 
 }
 
+
+
+.buttonlinkprofil{
+  background-color:#e3fc87 ;
+  padding: 16px;
+  border:none;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 16px;
+  width: 80%;
+  max-width: 490px;
+  font-family: Helvetica;
+  font-size: 16px;
+
+  
+}
+
+.divbuttonlinkprofil{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgbuttonlinkprofil{
+  margin-right: 100px;
+  
+}
+
+.divbuttonimagelinkprofil{
+  width: 50px;
+  background-color: #61dafb;
+}
+
+.divbuttonimagelinkprofilimg{
+  display: flex;
+  justify-content: center;
+
+  width: 5%;
+
+}
+
+.divbuttonimagelinkprofiltext{
+  width: 60%;
+  
+}
+.divbuttonimagelinkprofillinlk{
+  font-weight: bold;
+  color: #070707;
+  text-decoration: none;
+  
+}
+
+.ProfilName{
+  font-size: 18px;
+  font-weight: bold;
+
+}
 /* home //////////////////////////////  */
-.homecontainer{
+.homecontainer {
   margin-top: 30vh;
+  /* border: solid 1px red; */
+  display: flex;  /* Enables flexbox */
+  gap: 64px;  /* Sets 64px space between buttons */
+  justify-content: center; /* Centers buttons horizontally */
+}
+
+.containerbutton {
+  border: none;
+  margin: 10px;
+  padding: 50px;
+  border-radius: 16px;
+  width:  109px; /* Set your desired size */
+  height:  109px; /* Same as width to make it a square */
+  display: inline-flex; /* Ensures content stays centered */
+  align-items: center;
+  justify-content: center;
+}
+
+.candidaturbutton {
+  background-color:#e3fc87 ;
+  height: 48px;
+  width: 126px;
+  border:none;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 32px;
 
 
 }
+
+.candidaturbuttonprofil{
+  background-color: #ABA0FF;
+  height: 48px;
+  width: 126px;
+  border:none;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 32px;
+  color: black;
+  text-decoration: none;
+  
+
+}
+
+/* home //////////////////////////////  */
+
 
 .en_construction{
   height: 50vh;
