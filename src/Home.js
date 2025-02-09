@@ -124,7 +124,7 @@ function Home() {
         <div>
 
         <button className=" candidaturbuttonprofil" >
-          <Link  className="containerlink" to="/usersprofilelink" >
+          <Link  className="containerlink linkprofiltext" to="/usersprofilelink" >
           My profile
           </Link>
         </button>

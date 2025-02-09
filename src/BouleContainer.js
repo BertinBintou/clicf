@@ -478,7 +478,7 @@ function BouleContainer() {
     }, []);
 
     return (
-        <div style={{ position: "relative", height: "100vh", width: "100%" }}>
+        <div style={{ position: "relative", height: "100vh", width: "100%"}}>
             <h3>Catch the peach</h3>
 
             {currentBoule && (
@@ -525,6 +525,9 @@ function BouleContainer() {
                     {/* Profile information */}
                     <div>
                         <p className="ProfilName">{currentBoule.name && currentBoule.name}</p>
+                        <div className="divbuttonlinkprofil" >
+                        <p className="messageprofile">{currentBoule.message}</p>
+                        </div>
 
                         {currentBoule.instagram && (
                             <button className="buttonlinkprofil">
@@ -666,9 +669,9 @@ function BouleContainer() {
                                 </div>
                                 <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
                            
-                                <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
-                                     {currentBoule.twittername}
-                               </a>
+                                <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.redditname}
+                                 </a>
                                  </div>
                             </div>
                             
@@ -684,7 +687,7 @@ function BouleContainer() {
                             <div className="divbuttonlinkprofil" >
                             
                                 <div  className="divbuttonimagelinkprofilimg" >
-                                <img src="Property 1=Instagram.svg" className="imgbuttonlinkprofil"/>
+                                <img src="Property 1=Youtube.svg" className="imgbuttonlinkprofil"/>
                                 </div>
                                 <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
                            
@@ -695,7 +698,94 @@ function BouleContainer() {
                             </div>
                             
                             </button>
+
+
+
                         )}
+
+
+
+                        {/* {currentBoule.youtube && (
+                            // <p>YouTube 🔺{" "}
+                            //     <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                            //         {currentBoule.youtubename}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Youtube.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                                     {currentBoule.youtubename}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )} */}
+
+
+                        {currentBoule.fansly && (
+                            // <p>YouTube 🔺{" "}
+                            //     <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                            //         {currentBoule.youtubename}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Fansly.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.fansly} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                                     {currentBoule.fanslysname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+                        {currentBoule.manyvids && (
+                            // <p>Linkree{" "}
+                            //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.inkreename}
+                            //     </a>
+                            // </p>
+
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=manyvids.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.manyvids} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.manyvidsname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+
                         {currentBoule.linkree && (
                             // <p>Linkree{" "}
                             //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
@@ -707,7 +797,7 @@ function BouleContainer() {
                             <div className="divbuttonlinkprofil" >
                             
                                 <div  className="divbuttonimagelinkprofilimg" >
-                                <img src="Property 1=Instagram.svg" className="imgbuttonlinkprofil"/>
+                                <img src="Property 1=Link.svg" className="imgbuttonlinkprofil"/>
                                 </div>
                                 <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
                            
@@ -718,8 +808,16 @@ function BouleContainer() {
                             </div>
                             
                             </button>
+
+
+
                         )}
+                        {/* <div className="divbuttonlinkprofil" >
                         <p className="messageprofile">{currentBoule.message}</p>
+                        </div> */}
+                        
+                        {/* <div className="messageprofile"  >{currentBoule.message}</div> */}
+
                     </div>
                 </div>
             )}

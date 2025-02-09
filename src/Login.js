@@ -8,7 +8,7 @@
 
 //   return (
 //     <div className="App logincontainer">
-//       <h1>Bienvenu sur Catch My Peach</h1>
+//   
 //       <div className='logo'>🍑</div>
 //       <div className="logintitre">
 //         je confirme être majeur (au moins 18 ans) et avoir lu et accepté les conditions d'utilisations.
@@ -90,7 +90,11 @@ function Login() {
   return (
     <div className="App logincontainer">
       <h1>Bienvenu sur tap to fap</h1>
-      <div className='logo'>🍑</div>
+      {/* <div className='logo'>🍑</div> */}
+       <div className='logo'>
+          <img src="Peach (1).svg" alt="logo" />
+        </div> 
+
       <div className="logintitre">
         Je confirme être majeur (au moins 18 ans) et avoir lu et accepté les conditions d'utilisations🔞.
       </div>
@@ -109,7 +113,7 @@ function Login() {
         </button>
       </div>
       <button className="loginbutton" disabled={!isChecked} onClick={handleVisitSiteClick}>
-        <Link to="/home" className={`linkbutton add-button ${!isChecked ? 'disabled-link' : ''}`}>
+        <Link to="/home" className={`linkbutton  loginbutton add-button ${!isChecked ? 'disabled-link' : ''}`}>
           visiter le site
         </Link>
       </button>

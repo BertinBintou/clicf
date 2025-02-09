@@ -137,7 +137,7 @@ function Userprofil() {
 
     return (
         <div style={{ position: "relative", height: "100vh", width: "100%" }}>
-            <h3 style={{ color: "#1a198b" }}>Page profil</h3>
+            <h3 style={{ color: "#e3fc87" }}>Page profil</h3>
             <div>
                 <div style={{ fontWeight: "bold" }}>Filtres:</div>
                 <div className="filtrecontainer">
@@ -255,30 +255,320 @@ function Userprofil() {
                     ))}
 
                     {/* Profile information */}
-                    <div>
-                        <p>{currentBoule.name && currentBoule.name}</p>
-                        {currentBoule.instagram && (
+                    <div className="profilContainer">
+                        {/* <p>{currentBoule.name && currentBoule.name}</p> */}
+                        {/* {currentBoule.instagram && (
                             <p>Instagram 📲{" "}
                                 <a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer">
                                     {currentBoule.instaname}
                                 </a>
                             </p>
+                        )} */}
+
+                        <p className="ProfilName">{currentBoule.name && currentBoule.name}</p>
+                        <div className="divbuttonlinkprofil" >
+                        <p className="messageprofile">{currentBoule.message}</p>
+                        </div>
+
+                        {currentBoule.instagram && (
+                            <button className="buttonlinkprofil">
+                                <div className="divbuttonlinkprofil" >
+                                    {/* <div className="divbuttonlinkprofil divbuttonimagelinkprofil" >
+                                        <img src="Property 1=Instagram.svg" className="imgbuttonlinkprofil"/>
+                                    </div> */}
+                                    <div  className="divbuttonimagelinkprofilimg" >
+                                    <img src="Property 1=Instagram.svg" className="imgbuttonlinkprofil"/>
+                                    </div>
+                                    <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                               
+                                        <a href={currentBoule.instagram} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                         {currentBoule.instaname}
+                                        </a>
+                                     </div>
+                                </div>
+                                
+                            </button>
                         )}
-                        {currentBoule.tiktok && (
+                        {/* {currentBoule.tiktok && (
                             <p>TikTok 📲{" "}
                                 <a href={currentBoule.tiktok} target="_blank" rel="noopener noreferrer">
                                     {currentBoule.tiktokname}
                                 </a>
                             </p>
-                        )}
-                        {currentBoule.link && (
+                        )} */}
+                        {/* {currentBoule.link && (
                             <p>Links 🔗{" "}
                                 <a href={currentBoule.link} target="_blank" rel="noopener noreferrer">
                                     {currentBoule.linkname}
                                 </a>
                             </p>
+                        )} */}
+                        {currentBoule.tiktok && (
+                         
+                         <button className="buttonlinkprofil">
+                         <div className="divbuttonlinkprofil" >
+                         
+                             <div  className="divbuttonimagelinkprofilimg" >
+                             <img src="Property 1=Tiktok.svg" className="imgbuttonlinkprofil"/>
+                             </div>
+                             <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                        
+                             <a href={currentBoule.tiktok} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                  {currentBoule.tiktokname}
+                              </a>
+                              </div>
+                         </div>
+                         
+                     </button>
+                     )}
+                    {currentBoule.link && (
+                            // <p>Links 🔗{" "}
+                            //     <a href={currentBoule.link} target="_blank" rel="noopener noreferrer">
+                            //         {currentBoule.linkname}
+                            //     </a>
+                            // </p>
+
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Link.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.link} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.linkname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                        </button>
                         )}
                         {currentBoule.onlyfan && (
+                            // <p>OnlyFans 🔵{" "}
+                            //     <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.onlyfanname}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Onlyfans.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.onlyfanname}
+                                </a>
+                                 </div>
+                            </div>
+                            
+                        </button>
+                        )}
+                        {currentBoule.telegram && (
+                            // <p>Telegram ↗️{" "}
+                            //     <a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.telegramname}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Telegram.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.telegramname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                        </button>
+                        )}
+                        {currentBoule.twitter && (
+                            // <p>X (Twitter) ⚔️{" "}
+                            //     <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.twittername}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=X.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.twittername}
+                               </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+                        )}
+                        {currentBoule.reddit && (
+                            // <p>Reddit{" "}
+                            //     <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.redditname}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=X.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.redditname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+                        )}
+                        {currentBoule.youtube && (
+                            // <p>YouTube 🔺{" "}
+                            //     <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                            //         {currentBoule.youtubename}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Youtube.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                                     {currentBoule.youtubename}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+
+
+                        {/* {currentBoule.youtube && (
+                            // <p>YouTube 🔺{" "}
+                            //     <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                            //         {currentBoule.youtubename}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Youtube.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                                     {currentBoule.youtubename}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )} */}
+
+
+                        {currentBoule.fansly && (
+                            // <p>YouTube 🔺{" "}
+                            //     <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                            //         {currentBoule.youtubename}
+                            //     </a>
+                            // </p>
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Fansly.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.fansly} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk" >
+                                     {currentBoule.fanslysname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+                        {currentBoule.manyvids && (
+                            // <p>Linkree{" "}
+                            //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.inkreename}
+                            //     </a>
+                            // </p>
+
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=manyvids.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.manyvids} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.manyvidsname}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+
+                        {currentBoule.linkree && (
+                            // <p>Linkree{" "}
+                            //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                            //         {currentBoule.inkreename}
+                            //     </a>
+                            // </p>
+
+                            <button className="buttonlinkprofil">
+                            <div className="divbuttonlinkprofil" >
+                            
+                                <div  className="divbuttonimagelinkprofilimg" >
+                                <img src="Property 1=Link.svg" className="imgbuttonlinkprofil"/>
+                                </div>
+                                <div className="divbuttonlinkprofil divbuttonimagelinkprofiltext">
+                           
+                                <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
+                                     {currentBoule.inkreename}
+                                 </a>
+                                 </div>
+                            </div>
+                            
+                            </button>
+
+
+
+                        )}
+
+                        {/* {currentBoule.onlyfan && (
                             <p>OnlyFans 🔵{" "}
                                 <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer">
                                     {currentBoule.onlyfanname}
@@ -320,7 +610,7 @@ function Userprofil() {
                                 </a>
                             </p>
                         )}
-                        <p className="messageprofile">{currentBoule.message}</p>
+                        <p className="messageprofile">{currentBoule.message}</p> */}
                         </div>
                     </div>
 

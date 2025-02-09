@@ -32,9 +32,9 @@ export function Header() {
         className={({ isActive }) => (isActive ? "NavLink active" : "NavLink")}
         to="/home"
       >
-        Accueil
+       <img src="Property 1=Primary.svg" className="homeLogoNav"/>
       </NavLink>
-      <NavLink
+      {/* <NavLink
         className={({ isActive }) => (isActive ? "NavLink active" : "NavLink")}
         to="/femmes"
       >
@@ -45,13 +45,16 @@ export function Header() {
         to="/hommes"
       >
         Homme
-      </NavLink>
-      <NavLink
+      </NavLink> */}
+      {/* <NavLink
         className={({ isActive }) => (isActive ? "NavLink active" : "NavLink")}
         to="/conditions"
       >
         Nos conditions
-      </NavLink>
+      </NavLink> */}
+      <div className="navLogo">
+        <img  className="imglogonav" src="Logo_TtF.svg" alt="logo" />
+      </div>
     </nav>
   );
 }
