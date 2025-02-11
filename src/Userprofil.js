@@ -165,7 +165,7 @@ function Userprofil() {
                 </div>
 
                 {currentBoule && (
-                    <div style={{ padding: "20px", borderRadius: "8px", margin: "20px 0" }}> 
+                    <div style={{ borderRadius: "8px", margin: "20px 0" }}> 
                         <div style={{ display: "flex", flexDirection: "column", gap: "1px", alignItems: "center" }}>
                             { selectedRecordId && filteredData.length > 0 ? (
                                 <button
