@@ -175,7 +175,13 @@ body{
   padding-bottom: 32px;
 }
 
+.cardboule{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+}
 
 .buttonlinkprofil{
   background-color:#e3fc87 ;
@@ -355,6 +361,10 @@ body{
 /* userpfotil */
 .profilContainer{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {

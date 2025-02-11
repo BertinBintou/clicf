@@ -486,12 +486,14 @@ function BouleContainer() {
 
                     {/* Image display */}
                     {currentBoule.img && currentBoule.img.map((image, index) => (
+                        <div>
                         <img
                             key={index}
                             src={`/boulesia/${image}`}
                             style={{ width: '90%', height: "auto", borderRadius: "16px", maxWidth: "500px" }}
                             alt={`${currentBoule.name} - image ${index + 1}`}
                         />
+                        </div>
                     ))}
 
 
@@ -523,7 +525,7 @@ function BouleContainer() {
                                     )}
 
                     {/* Profile information */}
-                    <div>
+                    <div className="cardboule">
                         <p className="ProfilName">{currentBoule.name && currentBoule.name}</p>
                         <div className="divbuttonlinkprofil" >
                         <p className="messageprofile">{currentBoule.message}</p>
