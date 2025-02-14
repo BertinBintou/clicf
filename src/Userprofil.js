@@ -163,11 +163,25 @@ function Userprofil() {
                         />
                     </div>
                 </div>
+                {!currentBoule && filteredData.length > 0 && (
+                    <p style={{ marginTop: "150px" }}>Ajoutez votre identifiant et vous pourrez voir votre profil</p>
+                )}
+
+                {selectedRecordId && filteredData.length > 0 ? (
+                    <button
+                        onClick={handleShowBoule}
+                        style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "10px" }}
+                    >
+                        Afficher profil
+                    </button>
+                ) : (
+                    <p>Entrez un identifiant reconnu ❗</p>
+                )}
 
                 {currentBoule && (
                     <div style={{ borderRadius: "8px", margin: "20px 0" }}> 
                         <div style={{ display: "flex", flexDirection: "column", gap: "1px", alignItems: "center" }}>
-                            { selectedRecordId && filteredData.length > 0 ? (
+                            {/* { selectedRecordId && filteredData.length > 0 ? (
                                 <button
                                     onClick={handleShowBoule}
                                     style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "10px" }}
@@ -176,7 +190,7 @@ function Userprofil() {
                                 </button>
                             ) : (
                                 <p> Entrez un identifiant reconnu ❗</p>
-                            )}
+                            )} */}
 
                             {/* {currentBoule.img && currentBoule.img.map((image, index) => (
                                 <img
@@ -631,20 +645,7 @@ function Userprofil() {
 
 </div>
                 )}
-                {!currentBoule && filteredData.length > 0 && (
-                    <p style={{ marginTop: "150px" }}>Ajoutez votre identifiant et vous pourrez voir votre profil</p>
-                )}
-
-                {selectedRecordId && filteredData.length > 0 ? (
-                    <button
-                        onClick={handleShowBoule}
-                        style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "10px" }}
-                    >
-                        Afficher profil
-                    </button>
-                ) : (
-                    <p>Entrez un identifiant reconnu ❗</p>
-                )}
+               
             </div>
         </div>
     );
