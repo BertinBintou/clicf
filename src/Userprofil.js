@@ -136,7 +136,7 @@ function Userprofil() {
       };
 
     return (
-        <div style={{ position: "relative", height: "100vh", width: "100%" }}>
+        <div style={{ position: "relative", height: "100vh", width: "100%"}}>
             <h3 style={{ color: "#e3fc87" }}>Page profil</h3>
             <div>
                 <div style={{ fontWeight: "bold" }}>Filtres:</div>
@@ -159,7 +159,7 @@ function Userprofil() {
                             value={selectedRecordId}
                             onChange={handleRecordIdChange}
                             placeholder="Entrer votre identifiant"
-                            style={{ padding: "10px", borderRadius: "5px", maxWidth: "150px", border:"solid" }}
+                            style={{ padding: "10px", borderRadius: "5px", maxWidth: "150px", border:"solid 1px" }}
                         />
                     </div>
                 </div>
@@ -170,7 +170,7 @@ function Userprofil() {
                 {selectedRecordId && filteredData.length > 0 ? (
                     <button
                         onClick={handleShowBoule}
-                        style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "10px" }}
+                        style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "32px" }}
                     >
                         Afficher profil
                     </button>
@@ -179,8 +179,8 @@ function Userprofil() {
                 )}
 
                 {currentBoule && (
-                    <div style={{ borderRadius: "8px", margin: "20px 0" }}> 
-                        <div style={{ display: "flex", flexDirection: "column", gap: "1px", alignItems: "center" }}>
+                    <div style={{ borderRadius: "8px", margin: "0px 0"}}> 
+                        <div style={{ display: "flex", flexDirection: "column", gap: "1px", alignItems: "center"}}>
                             {/* { selectedRecordId && filteredData.length > 0 ? (
                                 <button
                                     onClick={handleShowBoule}
@@ -259,17 +259,17 @@ function Userprofil() {
                             )}
                             <p style={{ marginTop: "20px", fontStyle: "italic" }}>{currentBoule.message}</p> */}
 
-{currentBoule.img && currentBoule.img.map((image, index) => (
+                        {currentBoule.img && currentBoule.img.map((image, index) => (
                         <img
                             key={index}
                             src={`/boulesia/${image}`}
-                            style={{ width: '90%', height: "auto", borderRadius: "5px", maxWidth: "500px" }}
+                            style={{ width: '90%', height: "auto", borderRadius: "16px", maxWidth: "500px" }}
                             alt={`${currentBoule.name} - image ${index + 1}`}
                         />
                     ))}
 
                     {/* Profile information */}
-                    <div className="profilContainer">
+                    <div className="profilContainer"  >
                         {/* <p>{currentBoule.name && currentBoule.name}</p> */}
                         {/* {currentBoule.instagram && (
                             <p>Instagram 📲{" "}
@@ -285,7 +285,7 @@ function Userprofil() {
                         </div>
 
                         {currentBoule.instagram && (
-                            <button className="buttonlinkprofil">
+                            <button className="buttonlinkprofil" >
                                 <div className="divbuttonlinkprofil" >
                                     {/* <div className="divbuttonlinkprofil divbuttonimagelinkprofil" >
                                         <img src="Property 1=Instagram.svg" className="imgbuttonlinkprofil"/>
@@ -631,19 +631,16 @@ function Userprofil() {
      
 
 
-<button onClick={handleButtonClick}  style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "10px" }}>
-        {showDiv ? 'fermer' : 'Modifier profil ou autre demande'}
-      </button>
-      {showDiv && 
-      <div> 
+        <button onClick={handleButtonClick}  style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "32px" }}>
+             {showDiv ? 'fermer' : 'Modifier profil ou autre demande'}
+        </button>
+        {showDiv && 
+        <div> 
         {/* <div>peux mettre un peu de temps à charger...</div> */}
         {showLoadingMessage && <div>peux mettre un peu de temps à charger...</div>}
         <iframe class="airtable-embed" src="https://airtable.com/embed/appC6RFWJTUmYg7FU/pagql4a4wuoL3SZY0/form" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe></div>}
     {/* </div> */}
-
-
-
-</div>
+         </div>
                 )}
                
             </div>
