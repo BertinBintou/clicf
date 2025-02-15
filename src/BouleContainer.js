@@ -1912,17 +1912,18 @@ function BouleContainer() {
                     top: position.top,
                     left: position.left,
                     transform: "translate(-50%, -50%)",
-                    // padding: "25px 25px",
+                    padding: "5px",
                     fontSize: "16px",
                     cursor: "pointer",
-                    // border: "solid 1px",
-                    // borderRadius: "50px",
+                 
+                    borderRadius: "50px",
                     // background:"transparent",
                     border:"none",
+                    // border: "solid 1px white",
                     backgroundColor:"transparent"
                 }}
             >
-                <img src="Peach (1).svg" alt="peach" style={{ width: "60px", height: "60px" }} />
+                <img src="Peach (1).svg" alt="peach" style={{ width: "70px", height: "70px" }} />
             </button>
             )}
 
