@@ -98,15 +98,27 @@ body{
   /* border: solid 1px white; */
 }
 
-.logincontainer{
-  margin-top: 20vh;
-  /* display:flex;
+.logincontainer {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  padding: 20px;
-
+  min-height: 85vh;
+  justify-content: center; /* Center content */
+  align-items: center;
+  padding:50px;
 }
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.bottom-link {
+  margin-top: auto; /* Push to bottom */
+}
+
 .logincontainer button {
 
 }
@@ -135,17 +147,57 @@ body{
   font-size: 100px;
   margin-bottom: 50px;
 }
+.logo_login{
+width: 277px;
+height: 48.01px;
+margin-bottom: 150px;
+}
 
 .loginbutton{
-  border: none;
+  /* border: none;
   margin: 10px;
   padding: 10px;
   border-radius: 50px;
-  /* background-color: #e3fc87; */
+  background-color: #e3fc87;
   text-decoration: none;
+  height: ; */
+  margin: 10px;
+  padding: 11px;
+  background-color:#e3fc87 ;
+  padding: 16px;
+  border:none;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 16px;
+  text-decoration: none;
+
+
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #070707;
   
 }
 
+.linkbutton_logo{
+  color: white;
+  text-decoration: none;
+}
+
+.linkbutton_login{
+  background-color:#e3fc87 ;
+  padding: 16px;
+  border:none;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 16px;
+  /* width: 80%; */
+  /* max-width: 490px; */
+  width: 1000px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #070707;
+
+}
 /* .linkbutton{
   color: #070707;
   text-decoration: none;

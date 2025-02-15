@@ -1888,22 +1888,42 @@ function BouleContainer() {
             )}
 
             {!showRetryButton && (
+                // <button
+                //     onClick={handleShowBoule}
+                //     style={{
+                //         position: "absolute",
+                //         top: position.top,
+                //         left: position.left,
+                //         transform: "translate(-50%, -50%)",
+                //         padding: "25px 25px",
+                //         fontSize: "16px",
+                //         cursor: "pointer",
+                //         border: "solid 1px",
+                //         borderRadius: "50px"
+                //     }}
+                // >
+                //     🍑
+                // </button>
+
                 <button
-                    onClick={handleShowBoule}
-                    style={{
-                        position: "absolute",
-                        top: position.top,
-                        left: position.left,
-                        transform: "translate(-50%, -50%)",
-                        padding: "25px 25px",
-                        fontSize: "16px",
-                        cursor: "pointer",
-                        border: "solid 1px",
-                        borderRadius: "50px"
-                    }}
-                >
-                    🍑
-                </button>
+                onClick={handleShowBoule}
+                style={{
+                    position: "absolute",
+                    top: position.top,
+                    left: position.left,
+                    transform: "translate(-50%, -50%)",
+                    // padding: "25px 25px",
+                    fontSize: "16px",
+                    cursor: "pointer",
+                    // border: "solid 1px",
+                    // borderRadius: "50px",
+                    // background:"transparent",
+                    border:"none",
+                    backgroundColor:"transparent"
+                }}
+            >
+                <img src="Peach (1).svg" alt="peach" style={{ width: "60px", height: "60px" }} />
+            </button>
             )}
 
            

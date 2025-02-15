@@ -137,9 +137,9 @@ function Userprofil() {
 
     return (
         <div style={{ position: "relative", height: "100vh", width: "100%"}}>
-            <h3 style={{ color: "#e3fc87" }}>Page profil</h3>
+            {/* <h3 style={{ color: "#e3fc87" }}>Page profil</h3> */}
             <div>
-                <div style={{ fontWeight: "bold" }}>Filtres:</div>
+                {/* <div style={{ fontWeight: "bold" }}>Filtres:</div> */}
                 <div className="filtrecontainer">
                     {/* <div>
                         <p>Nombre</p>
@@ -153,18 +153,18 @@ function Userprofil() {
                         />
                     </div> */}
                     <div>
-                        <p>Identifiant</p>
+                        {/* <p>Identifiant</p> */}
                         <input 
                             type="text"
                             value={selectedRecordId}
                             onChange={handleRecordIdChange}
-                            placeholder="Entrer votre identifiant"
-                            style={{ padding: "10px", borderRadius: "5px", maxWidth: "150px", border:"solid 1px" }}
+                            placeholder="Password"
+                            style={{ padding: "10px", borderRadius: "5px", maxWidth: "150px", border:"solid 2px #E3FC87" }}
                         />
                     </div>
                 </div>
                 {!currentBoule && filteredData.length > 0 && (
-                    <p style={{ marginTop: "150px" }}>Ajoutez votre identifiant et vous pourrez voir votre profil</p>
+                    <p style={{ marginTop: "150px" }}></p>
                 )}
 
                 {selectedRecordId && filteredData.length > 0 ? (
@@ -175,7 +175,7 @@ function Userprofil() {
                         Afficher profil
                     </button>
                 ) : (
-                    <p>Entrez un identifiant reconnu ❗</p>
+                    <p></p>
                 )}
 
                 {currentBoule && (
@@ -528,11 +528,7 @@ function Userprofil() {
                         )}
 
                         {currentBoule.manyvids && (
-                            // <p>Linkree{" "}
-                            //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
-                            //         {currentBoule.inkreename}
-                            //     </a>
-                            // </p>
+                
 
                             <button className="buttonlinkprofil">
                             <div className="divbuttonlinkprofil" >
@@ -556,11 +552,7 @@ function Userprofil() {
 
 
                         {currentBoule.linkree && (
-                            // <p>Linkree{" "}
-                            //     <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer" className="divbuttonimagelinkprofillinlk">
-                            //         {currentBoule.inkreename}
-                            //     </a>
-                            // </p>
+                    
 
                             <button className="buttonlinkprofil">
                             <div className="divbuttonlinkprofil" >
@@ -582,49 +574,7 @@ function Userprofil() {
 
                         )}
 
-                        {/* {currentBoule.onlyfan && (
-                            <p>OnlyFans 🔵{" "}
-                                <a href={currentBoule.onlyfan} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.onlyfanname}
-                                </a>
-                            </p>
-                        )}
-                        {currentBoule.telegram && (
-                            <p>Telegram ↗️{" "}
-                                <a href={currentBoule.telegram} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.telegramname}
-                                </a>
-                            </p>
-                        )}
-                        {currentBoule.twitter && (
-                            <p>X (Twitter) ⚔️{" "}
-                                <a href={currentBoule.twitter} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.twittername}
-                                </a>
-                            </p>
-                        )}
-                        {currentBoule.reddit && (
-                            <p>Reddit{" "}
-                                <a href={currentBoule.reddit} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.redditname}
-                                </a>
-                            </p>
-                        )}
-                        {currentBoule.youtube && (
-                            <p>YouTube 🔺{" "}
-                                <a href={currentBoule.youtube} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.youtubename}
-                                </a>
-                            </p>
-                        )}
-                        {currentBoule.linkree && (
-                            <p>Linkree{" "}
-                                <a href={currentBoule.linkree} target="_blank" rel="noopener noreferrer">
-                                    {currentBoule.inkreename}
-                                </a>
-                            </p>
-                        )}
-                        <p className="messageprofile">{currentBoule.message}</p> */}
+                       
                         </div>
                     </div>
 
