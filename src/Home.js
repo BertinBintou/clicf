@@ -97,20 +97,23 @@ function Home() {
 
   return (
     <div className="App">
+  
       <div className="homecontainer">
-        {/* <p>Je veux voir des : </p> */}
+       {/* <div style={{border:"1px solid red", width:"100%"}}> */}
+       
         <button className="containerbutton" >
           <Link  className="containerlink" to="/femmes" >
-            womans 👩
+            show woman 👩
           </Link>
         </button>
         <button  className="containerbutton">
           <Link className="containerlink" to="/hommes" >
-            men 👨
+            show men 👨
           </Link>
         </button>
+        {/* </div> */}
       </div>
-       
+      
        <div>
        <button onClick={handleButtonClick}  className="candidaturbutton" style={{height:"48px"}} >
         {showDiv ? "Fermer" : "S'inscrire"}
@@ -119,7 +122,7 @@ function Home() {
       <div >
          
         {/* <div>peux mettre un peu de temps à charger...</div> */}
-        {showLoadingMessage && <div>peux mettre un peu de temps à charger...</div>}
+        {showLoadingMessage && <div className='loadingFormHome'>loading...</div>}
         <iframe class="airtable-embed" src="https://airtable.com/embed/appC6RFWJTUmYg7FU/pagOvkh4hdueEp6FH/form" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe></div>}
         <div>
 
