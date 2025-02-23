@@ -143,6 +143,14 @@ body{
 .containerlink{
   text-decoration: none;
   color: #070707;
+  padding: 0px;
+  background-color: transparent;
+  background: transparent;
+  margin: 16px;
+  /* width: 100%; */
+  /* border: solid 1px red;
+  width: 1000px; */
+  /* width: 1000px;  */
 }
 
 
@@ -221,9 +229,13 @@ margin-bottom: 150px;
 
 .boulecontainerbutton{
   border: none;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 50px;
   margin-bottom: 5px;
+  /* width: 1000px; */
+  background-color: transparent;
+  background: transparent;
+
 
 }
 
@@ -299,11 +311,13 @@ margin-bottom: 150px;
 }
 /* home //////////////////////////////  */
 .homecontainer {
-  margin-top: 30vh;
-  /* border: solid 1px red; */
-  display: flex;  /* Enables flexbox */
-  gap: 64px;  /* Sets 64px space between buttons */
-  justify-content: center; /* Centers buttons horizontally */
+  margin-top: 15vh;
+  /* border: solid 1px blueviolet; */
+  display: flex;  
+  flex-direction: column;
+  /* gap: 64px;   */
+  justify-content: center; 
+  align-items: center;
 }
 
 .loadingFormHome{
@@ -315,12 +329,15 @@ margin-bottom: 150px;
   margin: 10px;
   padding: 50px;
   border-radius: 16px;
-  width:  109px; /* Set your desired size */
-  height:  109px; /* Same as width to make it a square */
-  display: inline-flex; /* Ensures content stays centered */
+  /* width:  500px;  */
+  height:  200px;
+  font-display: flex;
+  /* border: solid 5px #fc8787; */
+  /* display: inline-flex; 
   align-items: center;
-  justify-content: center;
-  width:200%;
+  justify-content: center; */
+
+
 }
 
 .containerbutton {
@@ -336,6 +353,10 @@ margin-bottom: 150px;
 
 }
 
+.imgButtonHomme{
+  width: 100%;
+  height: 150px;
+}
 
 .candidaturbutton {
   background-color:#e3fc87 ;
@@ -409,6 +430,10 @@ margin-bottom: 150px;
   /* color: rgb(210, 219, 220); */
   text-decoration: underline; 
   /* border: solid 1px; */
+}
+
+.tapTotextHome{
+
 }
 
 /* profile message */
