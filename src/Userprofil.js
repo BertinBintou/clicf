@@ -784,7 +784,7 @@ function Userprofil() {
                         onClick={handleShowBoule}
                         // style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "32px" }}
                     >
-                        Afficher profil
+                        display profile
                     </button>
                 ) : (
                     <p></p>

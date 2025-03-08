@@ -186,7 +186,7 @@ function Home() {
         {/* </button> */}
         {/* <button  className="containerbutton" style={{width:"90%",height:"150px", maxWidth:"1000px"}}> */}
           <Link className="containerlink" to="/hommes" >
-          <img src="Div-1.png" alt="femme" className='imgButtonHomme'  />
+          <img src="Div-1.png" alt="homme" className='imgButtonHomme'  />
           </Link>
         {/* </button> */}
         {/* </div> */}
@@ -194,7 +194,7 @@ function Home() {
       
        <div>
        <button onClick={handleButtonClick}  className="candidaturbutton" style={{height:"48px"}} >
-        {showDiv ? "Fermer" : "S'inscrire"}
+        {showDiv ? "Close" : "Subscribe"}
       </button>
       {showDiv && 
       <div >

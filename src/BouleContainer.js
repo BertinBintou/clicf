@@ -1923,7 +1923,8 @@ function BouleContainer() {
                     backgroundColor:"transparent"
                 }}
             >
-                <img src="Peach (1).svg" alt="peach" style={{ width: "70px", height: "70px" }} />
+                {/* <img src="Peach (1).svg" alt="peach" style={{ width: "70px", height: "70px" }} /> */}
+                <img src="Ico.svg" alt="peach" style={{ width: "85px", height: "85px" }} />
             </button>
             )}
 
