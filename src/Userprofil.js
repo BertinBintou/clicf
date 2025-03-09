@@ -1031,6 +1031,16 @@ function Userprofil() {
 
                         )}
 
+                    <div className="user_modification_formulaire"  >
+                      <button onClick={handleButtonClick}  style={{ padding: "20px 20px", fontSize: "16px", cursor: "pointer", border: "solid 1px", borderRadius: "50px", margin: "32px" }}>
+                    {showDiv ? 'fermer' : 'Modifier profil ou autre demande'}
+                    </button>
+                    {showDiv && 
+                    <div> 
+                        {/* <div>peux mettre un peu de temps à charger...</div> */}
+                        {showLoadingMessage && <div>peux mettre un peu de temps à charger...</div>}
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/appC6RFWJTUmYg7FU/pagql4a4wuoL3SZY0/form" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe></div>}
+                                    {/* Profile information */}                     </div>
                        
                         </div>
                     </div>
