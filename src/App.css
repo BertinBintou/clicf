@@ -384,9 +384,24 @@ margin-bottom: 150px;
   border-radius: 64px;
   font-weight: bold;
   margin-top: 32px;
+  color: white;
 
   text-decoration: none;
   
+
+}
+
+.user_modification_formulaire_button{
+  background-color: #070707;
+  height: 48px;
+  width: 220px;
+  border: solid 2px #e3fc87;
+  border-radius: 64px;
+  font-weight: bold;
+  margin-top: 32px;
+  color: #e3fc87;
+
+  text-decoration: none;
 
 }
 
@@ -496,7 +511,6 @@ margin-bottom: 150px;
 }
 
 .user_modification_formulaire{
-border: solid 1px lightgrey;
 
 }
   
