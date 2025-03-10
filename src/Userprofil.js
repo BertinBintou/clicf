@@ -770,7 +770,7 @@ function Userprofil() {
                             type="text"
                             value={selectedRecordId}
                             onChange={handleRecordIdChange}
-                            placeholder="Password"
+                            placeholder="Profile code"
                             style={{ padding: "10px", borderRadius: "5px", maxWidth: "150px", border:"solid 2px #E3FC87" }}
                         />
                     </div>
