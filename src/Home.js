@@ -181,12 +181,12 @@ function Home() {
           <Link  className="containerlink" to="/femmes" >
   
             {/* <img src="Div.png" alt="femme" className='imgButtonHomme' style={{width:"100%",height:"150px", maxWidth:"1000px"}} /> */}
-            <img src="Div.png" alt="femme" className='imgButtonHomme'  />
+            <img src="Div.jpg" alt="femme" className='imgButtonHomme'  />
           </Link>
         {/* </button> */}
         {/* <button  className="containerbutton" style={{width:"90%",height:"150px", maxWidth:"1000px"}}> */}
           <Link className="containerlink" to="/hommes" >
-          <img src="Div-1.png" alt="homme" className='imgButtonHomme'  />
+          <img src="Div-1.jpg" alt="homme" className='imgButtonHomme'  />
           </Link>
         {/* </button> */}
         {/* </div> */}
