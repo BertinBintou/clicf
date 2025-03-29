@@ -68,6 +68,7 @@ import Conditionutilisation from './Conditionutilisation';
 import Secret from "./Secret";
 import Userprofil from "./Userprofil";
 import Footer from "./Footer"
+import FirstConnection from "./FirstConnection";
 
 // Create a context for checkbox state
 export const AuthContext = createContext();
@@ -100,6 +101,7 @@ function App() {
           <Route path="/hommes" element={<ProtectedRoute><Boulecontainerman /></ProtectedRoute>} />
           <Route path="/a" element={<Secret/>} />
           <Route path="/usersprofilelink" element={<Userprofil/>} />
+          <Route path="/firstconnection" element={<FirstConnection/>} />
           <Route path="*" element={<Error />} />
         </Routes>
         {/* <Footer/> */}
