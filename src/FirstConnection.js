@@ -131,9 +131,17 @@ function FirstConnection() {
                             display profile
                         </button>
                     ) : (
+                        <div>
+
                         <p style={{ marginTop: "150px", color: "#e3fc87", fontSize: "20px" }}>
-                            Wait 24h to activate your profile
+                        We will activate your account
+
                         </p>
+                        <p style={{  color: "#e3fc87", fontSize: "20px" }}>
+                            Please retry in 24 hours.
+                        </p>
+                        </div>
+                        
                     )
                 )}
 
